@@ -7,20 +7,23 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;
             </a>
-            <a href="#"(click)="callLaptop()">
+            <a href="#" (click)="getLaptop()">
               Laptops
             </a>
-            <a href="#" (click)="callMobile()">
+            <a href="#" (click)="getMobile()">
               Mobiles
             </a>
-            <a href="#" (click)="callTv()">
+            <a href="#" (click)="getTv()">
               Televisions
             </a>
-            <a href="#" (click)="callTablet">
+            <a href="#" (click)="getTablet()">
               Tablets
             </a>
-            <a href="#" (click)="callWatch()">
+            <a href="#" (click)="getWatch()">
               Smart watches & Wearables
+            </a>
+            <a href="#" (click)="getAllItem()">
+              Get All
             </a>
             <hr/>
             <a href="#" (click)="offerList()">
@@ -37,6 +40,48 @@
           <h3>ShopCart</h3>
         </div>
     </header>
+    <div class="showList">
+      <ul *ngFor='let lists of laptopArray'>
+        <li >
+          {{lists.name}}
+          <br/> 
+          {{lists.price}}
+          
+        </li>
+      </ul>
+      <ul *ngFor='let lists of mobileArray'>
+        <li >
+          {{lists.name}}
+          <br/> 
+          {{lists.price}}
+          
+        </li>
+      </ul>
+      <ul *ngFor='let lists of tvArray'>
+        <li >
+          {{lists.name}}
+          <br/> 
+          {{lists.price}}
+          
+        </li>
+      </ul>
+      <ul *ngFor='let lists of tabArray'>
+        <li >
+          {{lists.name}}
+          <br/> 
+          {{lists.price}}
+          
+        </li>
+      </ul>
+      <ul *ngFor='let lists of watchArray'>
+        <li >
+          {{lists.name}}
+          <br/> 
+          {{lists.price}}
+          
+        </li>
+      </ul>
+    </div>
     
    </body>
 </html>
